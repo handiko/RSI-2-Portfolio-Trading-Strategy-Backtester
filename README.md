@@ -50,9 +50,12 @@ Run the script:
 Code: [here](https://github.com/handiko/RSI-2-Portfolio-Trading-Strategy-Backtester/blob/main/JupyterNotebook/Portfolio%20Mode%20-%202-RSI%20Trading%20Strategy.ipynb)
 
 ## Example
-Backtesting 3 Indonesian stocks (BBCA, BMRI, and TLKM)
-
+### Backtesting A Portfolio Consisting of 3 Indonesian stocks (BBCA, BMRI, and TLKM)
 ![](./portfolio_trading_strategy_plot_3_tickers.png)
+
+
+### Backtesting A Portfolio Consisting of Meta and Microsoft (META & MSFT)
+![](./portfolio_trading_strategy_plot_2_tickers.png)
 
 ---
 
