@@ -1,6 +1,8 @@
 # Portfolio Trading Strategy Backtester
 This Python script implements and backtests a multi-asset trading strategy on a portfolio of up to five different stock tickers. It leverages common technical indicators to generate buy and sell signals and simulates portfolio performance over historical data.
 
+---
+
 ## Core Functionality
 * Multi-Asset Backtesting: The script is designed to handle a portfolio of 1 to 5 user-defined ticker symbols. It concurrently downloads, processes, and backtests the strategy on each asset, aggregating the results to track the total portfolio equity.
 * Indicator-Based Signals: The trading logic is built on a dual-indicator system:
@@ -45,5 +47,15 @@ Run the script:
     python your_script_name.py
 ```
 
+Code: here
+
+## Example
+Backtesting 3 Indonesian stocks (BBCA, BMRI, and TLKM)
+
+
+---
+
 ## Disclaimer!!
 This repository is intended for educational purposes only and does not constitute financial advice. Past performance is not indicative of future results.
+
+---
