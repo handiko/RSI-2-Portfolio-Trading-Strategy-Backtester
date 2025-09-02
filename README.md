@@ -27,12 +27,12 @@ For performance visualization, itertools.cycle is used to efficiently assign a d
 ## Installation & Usage
 Clone the repository:
 ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/handiko/RSI-2-Portfolio-Trading-Strategy-Backtester.git
 ```
 
 Navigate to the directory:
 ```bash
-    cd your-repo-name
+    cd RSI-2-Portfolio-Trading-Strategy-Backtester.
 ```
 
 Install the required libraries:
