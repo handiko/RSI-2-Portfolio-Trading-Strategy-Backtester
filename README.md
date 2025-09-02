@@ -60,3 +60,6 @@ Backtesting 3 Indonesian stocks (BBCA, BMRI, and TLKM)
 This repository is intended for educational purposes only and does not constitute financial advice. Past performance is not indicative of future results.
 
 ---
+
+## Related Project
+[RSI-2 Stock Strading Strategy](https://github.com/handiko/RSI-2-Stock-Trading-Strategy/blob/main/README.md)
