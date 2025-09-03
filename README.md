@@ -20,9 +20,21 @@ This Python script implements and backtests a multi-asset trading strategy on a 
 ## Technical Breakdown
 The backtesting engine operates on a synchronized timeline, ensuring all tickers in the portfolio are evaluated on the same dates. This is achieved by first creating a consolidated, unique, and sorted list of all trading dates across all downloaded datasets using pd.concat(). A minimum start date for the backtest is then determined as the date after which the 200-day SMA is available for all tickers, preventing data look-back errors.
 
-The core of the simulation is a for loop that iterates through this master list of dates. For each day, the script uses a dictionary (portfolio_state) to maintain the independent state of each ticker (e.g., in_position, shares, cash, entry_dates, exit_dates). This allows the trading logic to be applied individually to each asset, making autonomous buy/sell decisions based on its own data. The portfolio's total value is then calculated by summing the cash and current market value of all holdings on that day.
+The core of the simulation is a for loop that iterates through this master list of dates. For each day, the script uses a dictionary (portfolio_state) to maintain the independent state of each ticker (e.g., in_position, shares, cash, entry_dates, exit_dates). This enables the trading logic to be applied individually to each asset, allowing it to make autonomous buy/sell decisions based on its own data. The portfolio's total value is then calculated by summing the cash and current market value of all holdings on that day.
 
 For performance visualization, itertools.cycle is used to efficiently assign a different marker style and color to the buy/sell signals of each ticker, enhancing the readability of the multi-asset plot without requiring manual assignment.
+
+## Performance Metrics Explained
+This Python function: 
+```python
+def calculate_metrics(equity_curve, initial_capital, risk_free_rate=0.04):
+```
+is used to evaluate the performance of a trading strategy. By analyzing an equity curve—a time series representing the strategy's total portfolio value—it computes several essential metrics that provide a comprehensive view of the strategy's profitability, risk, and consistency.
+1. Total Portfolio Return: The Total Return measures the overall profitability of the strategy over the entire backtested period. It's calculated as the percentage change from the initial capital to the final portfolio value. A positive return indicates a profit, while a negative return signifies a loss. This metric is useful for understanding the absolute growth of the portfolio.
+2. Compounded Annual Growth Rate (CAGR): CAGR represents the average annual return that an investment needs to generate to grow from its initial balance to its final balance, assuming the profits are reinvested each year. Unlike the total return, which provides a single snapshot, CAGR provides a smoothed, annualized rate of return, making it an excellent tool for comparing the performance of different strategies over varying time periods.
+3. Maximum Drawdown: Maximum Drawdown (MDD) is a key risk metric that measures the largest peak-to-trough decline in the portfolio's value over a specific period.  It's expressed as a percentage and indicates the worst-case scenario loss an investor would have endured if they had bought at a peak and sold at the subsequent trough. A lower MDD signifies a more resilient strategy with less capital risk.
+4. Sharpe Ratio: The Sharpe Ratio measures the risk-adjusted return of an investment. It tells you how much excess return you are getting for the extra volatility you endure. It's calculated by subtracting the risk-free rate from the strategy's return and dividing the result by the standard deviation of its returns. A higher Sharpe Ratio indicates a better return for a given level of risk, meaning the strategy is generating returns more efficiently.
+5. Sortino Ratio: Similar to the Sharpe Ratio, the Sortino Ratio also measures risk-adjusted return but focuses specifically on downside volatility. It penalizes only the negative returns (or "bad" volatility), as it's concerned with how much return a strategy is generating relative to the risk of significant losses. This makes it particularly useful for strategies that aim to minimize losses, as it ignores the volatility from positive price movements. A higher Sortino Ratio suggests better performance for a given level of downside risk.
 
 ## Installation & Usage
 Clone the repository:
