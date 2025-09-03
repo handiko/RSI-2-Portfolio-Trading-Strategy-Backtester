@@ -1,10 +1,10 @@
 # Portfolio Trading Strategy Backtester
-This Python script implements and backtests a multi-asset trading strategy on a portfolio of up to five different stock tickers. It leverages common technical indicators to generate buy and sell signals and simulates portfolio performance over historical data.
+This Python script implements and backtests a multi-asset trading strategy on a portfolio of several different stock tickers. It leverages common technical indicators to generate buy and sell signals and simulates portfolio performance over historical data.
 
 ---
 
 ## Core Functionality
-* Multi-Asset Backtesting: The script is designed to handle a portfolio of 1 to 5 user-defined ticker symbols. It concurrently downloads, processes, and backtests the strategy on each asset, aggregating the results to track the total portfolio equity.
+* Multi-Asset Backtesting: The script is designed to handle a portfolio of several user-defined ticker symbols. It concurrently downloads, processes, and backtests the strategy on each asset, aggregating the results to track the total portfolio equity.
 * Indicator-Based Signals: The trading logic is built on a dual-indicator system:
   * 200-Day Simple Moving Average (SMA): The script calculates the 200-day SMA, a long-term trend-following indicator. A buy signal is generated only when the closing price of the asset is above this moving average, confirming an uptrend.
   * 2-Period Relative Strength Index (RSI): The 2-period RSI, a momentum oscillator, is used to identify short-term overbought or oversold conditions. A buy signal is triggered when the RSI falls below a threshold of 10, indicating that the asset may be oversold.
