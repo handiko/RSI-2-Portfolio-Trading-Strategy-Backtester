@@ -58,6 +58,11 @@ Code: [here](https://github.com/handiko/RSI-2-Portfolio-Trading-Strategy-Backtes
 ### Backtesting A Portfolio Consisting of Meta and Microsoft (META & MSFT)
 ![](./portfolio_trading_strategy_plot_2_tickers.png)
 
+
+
+### Backtesting A FAANG+ Portfolio (META, AAPL, AMZN, NVDA, GOOG, & MSFT)
+![](./portfolio_trading_strategy_plot_6_tickers.png)
+
 ---
 
 ## Disclaimer!!
