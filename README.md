@@ -77,7 +77,7 @@ Code: [here](https://github.com/handiko/RSI-2-Portfolio-Trading-Strategy-Backtes
 
 
 
-### Backtesting A FAANG+ Portfolio (META, AAPL, AMZN, NVDA, GOOG, & MSFT)
+### Backtesting the FAANG+ Portfolio (META, AAPL, AMZN, NVDA, GOOG, & MSFT)
 ![](./portfolio_trading_strategy_plot_6_tickers.png)
 
 ---
